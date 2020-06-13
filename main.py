@@ -128,7 +128,7 @@ class ceqSystem:
                 if res.status_code == 302:
                     soup = BeautifulSoup(res.text, 'html.parser')
                     status = soup.find('a')['href']
-                    if status == '/StuFillIn':
+                    if status == '/StuFillIn' or status == '/StuFillIn/Default':
                         core.log('%s 填寫成功' % course_cell['name'])
 
     def log(self, text):
